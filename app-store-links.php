@@ -4,8 +4,8 @@
  * Plugin URI: https://github.com/iyuya1808/App-Link-Generator
  * Description: AppStoreとGoogle Play Storeのインストールリンクを簡単に表示できるブロックエディタ対応プラグイン
  * Version: 1.1.0
- * Author: Your Name
- * Author URI: https://example.com
+ * Author: Technophere
+ * Author URI: https://technophere.com
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: app-link-generator
