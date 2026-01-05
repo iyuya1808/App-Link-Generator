@@ -2,10 +2,10 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
   "name": "app-store-links/download-buttons",
-  "title": "アプリストアリンク",
+  "title": "アプリリンクジェネレーター",
   "category": "widgets",
   "icon": "smartphone",
-  "description": "App StoreとGoogle Playストアのリンクを表示します",
+  "description": "App StoreとGoogle Playストアのアプリリンクを自動生成して表示します",
   "keywords": [
     "app",
     "store",

@@ -1,8 +1,8 @@
-# App Store Links プラグイン - 機能詳細ドキュメント
+# App Link Generator - 機能詳細ドキュメント
 
 ## 概要
 
-**App Store Links** は、WordPressのブロックエディタ(Gutenberg)に対応したプラグインで、App StoreとGoogle Play Storeのアプリ情報を美しく表示するためのブロックを提供します。アプリ検索機能により、アプリ情報を自動取得して簡単に挿入できます。
+**App Link Generator** は、WordPressのブロックエディタ(Gutenberg)に対応したプラグインで、App StoreとGoogle Play Storeのアプリ情報を美しく表示するためのブロックを提供します。アプリ検索機能により、アプリ情報を自動取得して簡単に挿入できます。
 
 - **バージョン**: 1.1.0
 - **必要環境**: WordPress 5.8以上、PHP 7.4以上
@@ -328,4 +328,4 @@ npm run build
 
 ## まとめ
 
-App Store Linksプラグインは、WordPressブロックエディタでアプリストアリンクを美しく表示するための包括的なソリューションです。自動検索、キャッシュ管理、日次更新により、常に最新のアプリ情報を手間なく表示できます。AppReachスタイルの洗練されたデザインと、iOS/Android両対応により、モバイルアプリの紹介に最適なツールとなっています。
+App Link Generatorは、WordPressブロックエディタでアプリストアリンクを美しく表示するための包括的なソリューションです。自動検索、キャッシュ管理、日次更新により、常に最新のアプリ情報を手間なく表示できます。AppReachスタイルの洗練されたデザインと、iOS/Android両対応により、モバイルアプリの紹介に最適なツールとなっています。

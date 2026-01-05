@@ -1,7 +1,7 @@
 {
-  "name": "app-store-links",
+  "name": "app-link-generator",
   "version": "1.1.0",
-  "description": "AppStore and Google Play Store links block",
+  "description": "App Link Generator - AppStore and Google Play Store links block",
   "scripts": {
     "build": "wp-scripts build",
     "start": "wp-scripts start"

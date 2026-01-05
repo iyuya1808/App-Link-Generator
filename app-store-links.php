@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name: App Store Links
- * Plugin URI: https://example.com/app-store-links
+ * Plugin Name: App Link Generator
+ * Plugin URI: https://github.com/iyuya1808/App-Link-Generator
  * Description: AppStoreとGoogle Play Storeのインストールリンクを簡単に表示できるブロックエディタ対応プラグイン
  * Version: 1.1.0
  * Author: Your Name
  * Author URI: https://example.com
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: app-store-links
+ * Text Domain: app-link-generator
  */
 
 // 直接アクセスを防止
