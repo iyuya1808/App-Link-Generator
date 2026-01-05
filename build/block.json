@@ -1,0 +1,87 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "app-store-links/download-buttons",
+  "title": "アプリストアリンク",
+  "category": "widgets",
+  "icon": "smartphone",
+  "description": "App StoreとGoogle Playストアのリンクを表示します",
+  "keywords": [
+    "app",
+    "store",
+    "download",
+    "mobile",
+    "アプリ"
+  ],
+  "version": "1.0.0",
+  "textdomain": "app-store-links",
+  "attributes": {
+    "appName": {
+      "type": "string",
+      "default": ""
+    },
+    "iconUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "developer": {
+      "type": "string",
+      "default": ""
+    },
+    "price": {
+      "type": "string",
+      "default": ""
+    },
+    "appStoreUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "googlePlayUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "showAppStore": {
+      "type": "boolean",
+      "default": true
+    },
+    "showGooglePlay": {
+      "type": "boolean",
+      "default": true
+    },
+    "rating": {
+      "type": "number",
+      "default": 0
+    },
+    "reviewCount": {
+      "type": "string",
+      "default": ""
+    },
+    "trackId": {
+      "type": "string",
+      "default": ""
+    },
+    "store": {
+      "type": "string",
+      "default": ""
+    },
+    "lastUpdated": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

@@ -1,0 +1,146 @@
+:root {
+  --asl-bg-color: #fff;
+  --asl-text-color: #333;
+  --asl-border-color: #7C7C7C;
+  --asl-meta-color: #666;
+  --asl-link-color: #888;
+  --asl-site-bg: #fff;
+  --asl-site-text: #333;
+}
+
+[data-theme="dark"] {
+  --asl-bg-color: #2b2b2b;
+  --asl-text-color: #e0e0e0;
+  --asl-border-color: #444;
+  --asl-meta-color: #aaa;
+  --asl-link-color: #ccc;
+  --asl-site-bg: #1a1a1a;
+  --asl-site-text: #f0f0f0;
+}
+
+body.asl-dark-mode {
+  background-color: var(--asl-site-bg) !important;
+  color: var(--asl-site-text) !important;
+}
+
+.asl-dark-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--asl-bg-color);
+  color: var(--asl-text-color);
+  border: 1px solid var(--asl-border-color);
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-family: sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.asl-dark-mode-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.appreach {
+  text-align: left;
+  padding: 10px;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5em;
+  background: var(--asl-bg-color);
+  color: var(--asl-text-color);
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+.appreach:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.appreach p {
+  margin: 0;
+}
+.appreach a:after {
+  display: none;
+}
+.appreach__icon {
+  float: left;
+  border-radius: 17.5% !important; /* Slightly more rounded like iOS */
+  overflow: hidden;
+  margin: 0 3% 0 0 !important;
+  width: 25% !important;
+  height: auto !important;
+  max-width: 120px !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.appreach__detail {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 1.5;
+  width: 72%;
+  max-width: 72%;
+}
+.appreach__detail:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.appreach__name {
+  font-size: 16px;
+  line-height: 1.5em !important;
+  max-height: 3em;
+  overflow: hidden;
+  font-weight: bold;
+}
+.appreach__info {
+  font-size: 12px !important;
+  color: var(--asl-meta-color);
+  margin-top: 4px !important;
+}
+.appreach__developper, .appreach__price {
+  margin-right: 0.5em;
+}
+.appreach__posted a {
+  margin-left: 0.5em;
+  color: var(--asl-link-color);
+  text-decoration: none;
+}
+.appreach__links {
+  float: left;
+  height: 40px;
+  margin-top: 15px;
+  white-space: nowrap;
+}
+.appreach__aslink img {
+  margin-right: 10px;
+  height: 40px;
+  width: 135px;
+}
+.appreach__gplink img {
+  height: 40px;
+  width: 134.5px;
+}
+.appreach__star {
+  position: relative;
+  font-size: 14px !important;
+  height: 1.5em;
+  width: 5em;
+}
+.appreach__star__base {
+  position: absolute;
+  color: #737373;
+}
+.appreach__star__evaluate {
+  position: absolute;
+  color: #ffc107;
+  overflow: hidden;
+  white-space: nowrap;
+}

@@ -1,0 +1,53 @@
+/**
+ * App Store Links - エディタ用スタイル
+ */
+
+.app-download-section-editor {
+    padding: 30px 20px;
+    background: #f5f5f5;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.app-download-section-editor .download-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.app-download-section-editor .store-badge-preview {
+    display: inline-block;
+}
+
+.app-download-section-editor .store-badge {
+    display: inline-block;
+    pointer-events: none;
+}
+
+.app-download-section-editor .store-badge img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+.app-download-section-editor .placeholder {
+    padding: 20px 30px;
+    background: #fff;
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    color: #666;
+    font-size: 14px;
+    min-width: 200px;
+}
+
+/* インスペクターコントロールのスタイル調整 */
+.components-panel__body .components-base-control {
+    margin-bottom: 16px;
+}
+
+.components-panel__body .components-text-control__input {
+    width: 100%;
+}
