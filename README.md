@@ -2,7 +2,7 @@
 Contributors: iyuya0623
 Tags: app store, google play, link, block
 Requires at least: 5.8
-Tested up to: 6.7
+Tested up to: 6.9
 Stable tag: 1.1.0
 Requires PHP: 7.4
 License: GPLv2 or later
