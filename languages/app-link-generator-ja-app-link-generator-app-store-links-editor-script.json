@@ -1,0 +1,33 @@
+{
+	"translation-revision-date": "2026-03-17T00:00:00+09:00",
+	"generator": "GlotPress/4.0.1",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"plural-forms": "nplurals=1; plural=0;",
+				"lang": "ja"
+			},
+			"アプリ詳細": [ "アプリ詳細" ],
+			"アプリ名": [ "アプリ名" ],
+			"アイコンURL": [ "アイコンURL" ],
+			"開発者": [ "開発者" ],
+			"価格": [ "価格" ],
+			"評価 (0-5)": [ "評価 (0-5)" ],
+			"レビュー数": [ "レビュー数" ],
+			"ストアリンク": [ "ストアリンク" ],
+			"App Store URL": [ "App Store URL" ],
+			"App Storeリンクを表示": [ "App Storeリンクを表示" ],
+			"Google Play URL": [ "Google Play URL" ],
+			"Google Playリンクを表示": [ "Google Playリンクを表示" ],
+			"アプリを検索...": [ "アプリを検索..." ],
+			"検索": [ "検索" ],
+			"iPhoneアプリ検索結果": [ "iPhoneアプリ検索結果" ],
+			"Androidアプリ検索結果": [ "Androidアプリ検索結果" ],
+			"見つかりませんでした。": [ "見つかりませんでした。" ],
+			"アプリリンクジェネレーター": [ "アプリリンクジェネレーター" ],
+			"アプリを検索して詳細を表示してください。": [ "アプリを検索して詳細を表示してください。" ]
+		}
+	}
+}
