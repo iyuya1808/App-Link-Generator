@@ -1,5 +1,5 @@
 === App Link Generator ===
-Contributors: technophere
+Contributors: iyuya0623
 Tags: app store, google play, mobile app, app link, block editor
 Requires at least: 5.8
 Tested up to: 6.9
