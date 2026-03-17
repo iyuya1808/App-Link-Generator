@@ -1,6 +1,8 @@
 <?php
 
-class AppStoreScraper {
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+class APPLIGE_AppStoreScraper {
     private $lookup_url = 'https://itunes.apple.com/lookup?country=JP&id=';
 
     public function get_details($id) {

@@ -1,6 +1,8 @@
 <?php
 
-class GooglePlayScraper {
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+class APPLIGE_GooglePlayScraper {
     private $base_url = 'https://play.google.com/store/search';
 
     public function search($term) {

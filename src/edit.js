@@ -285,12 +285,12 @@ export default function Edit({ attributes, setAttributes }) {
                     <div className="appreach__links" style={{ clear: 'both', marginTop: '8px' }}>
                         {showAppStore && appStoreUrl && (
                             <a href={appStoreUrl} rel="nofollow" className="appreach__aslink" style={{ display: 'inline-block', marginRight: '10px' }}>
-                                <img src="https://nabettu.github.io/appreach/img/itune_ja.svg" style={{ height: '40px', width: '135px' }} />
+                                <img src={window.appligeBadgeImages?.appStore || ''} style={{ height: '40px', width: '135px' }} />
                             </a>
                         )}
                         {showGooglePlay && googlePlayUrl && (
                             <a href={googlePlayUrl} rel="nofollow" className="appreach__gplink" style={{ display: 'inline-block' }}>
-                                <img src="https://nabettu.github.io/appreach/img/gplay_ja.png" style={{ height: '40px', width: '134.5px' }} />
+                                <img src={window.appligeBadgeImages?.googlePlay || ''} style={{ height: '40px', width: '134.5px' }} />
                             </a>
                         )}
                     </div>

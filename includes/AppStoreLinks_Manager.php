@@ -1,11 +1,13 @@
 <?php
 
-class AppStoreLinks_Manager {
-    private static $option_name = 'app_store_links_registry';
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+class APPLIGE_Manager {
+    private static $option_name = 'applige_registry';
     private static $cache_time = 86400; // 24 hours
 
     public static function init() {
-        add_action('app_store_links_daily_update', array(__CLASS__, 'cron_update_all'));
+        add_action('applige_daily_update', array(__CLASS__, 'cron_update_all'));
     }
 
     /**
@@ -24,7 +26,7 @@ class AppStoreLinks_Manager {
         self::register_app($id, $store);
 
         // Check transient
-        $transient_key = 'asl_' . $store . '_' . $id;
+        $transient_key = 'applige_' . $store . '_' . $id;
         $cached_data = get_transient($transient_key);
 
         if ($cached_data !== false) {
@@ -75,7 +77,7 @@ class AppStoreLinks_Manager {
             update_option(self::$option_name, $registry);
             
             // Initial fetch if not cached
-            if (get_transient('asl_' . $store . '_' . $id) === false) {
+            if (get_transient('applige_' . $store . '_' . $id) === false) {
                 // Determine which scraper to use
                 self::fetch_and_cache($id, $store);
             }
@@ -89,17 +91,17 @@ class AppStoreLinks_Manager {
         $data = false;
 
         if ($store === 'ios') {
-            if (!class_exists('AppStoreScraper')) {
+            if (!class_exists('APPLIGE_AppStoreScraper')) {
                 require_once plugin_dir_path(dirname(__FILE__)) . 'includes/AppStoreScraper.php';
             }
-            $scraper = new AppStoreScraper();
+            $scraper = new APPLIGE_AppStoreScraper();
             $data = $scraper->get_details($id);
 
         } else if ($store === 'google_play') {
-            if (!class_exists('GooglePlayScraper')) {
+            if (!class_exists('APPLIGE_GooglePlayScraper')) {
                 require_once plugin_dir_path(dirname(__FILE__)) . 'includes/GooglePlayScraper.php';
             }
-            $scraper = new GooglePlayScraper();
+            $scraper = new APPLIGE_GooglePlayScraper();
             $raw_data = $scraper->get_details($id);
             
             if ($raw_data) {
@@ -128,7 +130,7 @@ class AppStoreLinks_Manager {
 
         if ($data) {
             $data['lastUpdated'] = date('Y.m.d');
-            $transient_key = 'asl_' . $store . '_' . $id;
+            $transient_key = 'applige_' . $store . '_' . $id;
             set_transient($transient_key, $data, self::$cache_time);
             return true;
         }

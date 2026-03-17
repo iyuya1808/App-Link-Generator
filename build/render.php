@@ -5,9 +5,11 @@
  * @var array $attributes Block attributes.
  */
 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 // Use Manager to get dynamic data (cache/fresh)
-if (class_exists('AppStoreLinks_Manager')) {
-    $attributes = AppStoreLinks_Manager::get_app_data($attributes);
+if (class_exists('APPLIGE_Manager')) {
+    $attributes = APPLIGE_Manager::get_app_data($attributes);
 }
 
 $app_name = isset($attributes['appName']) ? $attributes['appName'] : '';
@@ -66,13 +68,13 @@ if (empty($app_name)) {
     <div class="appreach__links" style="">
         <?php if ($show_app_store && !empty($app_store_url)) : ?>
             <a href="<?php echo esc_url($app_store_url); ?>" rel="nofollow" class="appreach__aslink">
-                <img src="https://nabettu.github.io/appreach/img/itune_ja.svg" alt="Download on the App Store">
+                <img src="<?php echo esc_url(plugin_dir_url(dirname(__FILE__)) . 'assets/images/itune_ja.svg'); ?>" alt="Download on the App Store">
             </a>
         <?php endif; ?>
         
         <?php if ($show_google_play && !empty($google_play_url)) : ?>
             <a href="<?php echo esc_url($google_play_url); ?>" rel="nofollow" class="appreach__gplink">
-                <img src="https://nabettu.github.io/appreach/img/gplay_ja.png" alt="Get it on Google Play">
+                <img src="<?php echo esc_url(plugin_dir_url(dirname(__FILE__)) . 'assets/images/gplay_ja.png'); ?>" alt="Get it on Google Play">
             </a>
         <?php endif; ?>
     </div>
