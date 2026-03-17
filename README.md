@@ -3,7 +3,7 @@ Contributors: iyuya0623
 Tags: app store, google play, link, block
 Requires at least: 5.8
 Tested up to: 6.9
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -77,6 +77,13 @@ Yes, the plugin is translation ready with the text domain 'app-link-generator'.
 3. Block settings in the sidebar
 
 == Changelog ==
+
+= 1.2.0 =
+* Japanese localization for admin/editor UI
+* Unified text domain to app-link-generator
+* Added wp_set_script_translations() support
+* Added load_plugin_textdomain()
+* Translated readme.txt to Japanese
 
 = 1.1.0 =
 * Updated to Block API version 3

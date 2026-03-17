@@ -134,29 +134,29 @@ export default function Edit({ attributes, setAttributes }) {
     return (
         <div {...blockProps}>
             <InspectorControls>
-                <PanelBody title={__('アプリ詳細', 'app-store-links')}>
+                <PanelBody title={__('アプリ詳細', 'app-link-generator')}>
                     <TextControl
-                        label={__('アプリ名', 'app-store-links')}
+                        label={__('アプリ名', 'app-link-generator')}
                         value={appName}
                         onChange={(value) => setAttributes({ appName: value })}
                     />
                     <TextControl
-                        label={__('アイコンURL', 'app-store-links')}
+                        label={__('アイコンURL', 'app-link-generator')}
                         value={iconUrl}
                         onChange={(value) => setAttributes({ iconUrl: value })}
                     />
                     <TextControl
-                        label={__('開発者', 'app-store-links')}
+                        label={__('開発者', 'app-link-generator')}
                         value={developer}
                         onChange={(value) => setAttributes({ developer: value })}
                     />
                     <TextControl
-                        label={__('価格', 'app-store-links')}
+                        label={__('価格', 'app-link-generator')}
                         value={price}
                         onChange={(value) => setAttributes({ price: value })}
                     />
                     <TextControl
-                        label={__('評価 (0-5)', 'app-store-links')}
+                        label={__('評価 (0-5)', 'app-link-generator')}
                         value={rating}
                         type="number"
                         step="0.1"
@@ -165,29 +165,29 @@ export default function Edit({ attributes, setAttributes }) {
                         onChange={(value) => setAttributes({ rating: parseFloat(value) })}
                     />
                     <TextControl
-                        label={__('レビュー数', 'app-store-links')}
+                        label={__('レビュー数', 'app-link-generator')}
                         value={reviewCount}
                         onChange={(value) => setAttributes({ reviewCount: value })}
                     />
                 </PanelBody>
-                <PanelBody title={__('ストアリンク', 'app-store-links')}>
+                <PanelBody title={__('ストアリンク', 'app-link-generator')}>
                     <TextControl
-                        label={__('App Store URL', 'app-store-links')}
+                        label={__('App Store URL', 'app-link-generator')}
                         value={appStoreUrl}
                         onChange={(value) => setAttributes({ appStoreUrl: value })}
                     />
                     <ToggleControl
-                        label={__('App Storeリンクを表示', 'app-store-links')}
+                        label={__('App Storeリンクを表示', 'app-link-generator')}
                         checked={showAppStore}
                         onChange={(value) => setAttributes({ showAppStore: value })}
                     />
                     <TextControl
-                        label={__('Google Play URL', 'app-store-links')}
+                        label={__('Google Play URL', 'app-link-generator')}
                         value={googlePlayUrl}
                         onChange={(value) => setAttributes({ googlePlayUrl: value })}
                     />
                     <ToggleControl
-                        label={__('Google Playリンクを表示', 'app-store-links')}
+                        label={__('Google Playリンクを表示', 'app-link-generator')}
                         checked={showGooglePlay}
                         onChange={(value) => setAttributes({ showGooglePlay: value })}
                     />
@@ -200,12 +200,12 @@ export default function Edit({ attributes, setAttributes }) {
                     <TextControl
                         value={searchTerm}
                         onChange={setSearchTerm}
-                        placeholder={__('アプリを検索...', 'app-store-links')}
+                        placeholder={__('アプリを検索...', 'app-link-generator')}
                         className="app-search-input"
                         style={{ marginBottom: 0, flex: 1 }}
                     />
                     <Button variant="primary" onClick={searchApps} isBusy={isSearching} disabled={isSearching || !searchTerm}>
-                        {__('検索', 'app-store-links')}
+                        {__('検索', 'app-link-generator')}
                     </Button>
                 </div>
                 
@@ -215,13 +215,13 @@ export default function Edit({ attributes, setAttributes }) {
                         <div style={{ flex: '1 1 300px' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px', color: '#666', borderBottom: '1px solid #eee', paddingBottom: '5px' }}>
                                 <span className="dashicons dashicons-smartphone" style={{ color: '#ff6b6b' }}></span>
-                                <span>{__('iPhoneアプリ検索結果', 'app-store-links')}</span>
+                                <span>{__('iPhoneアプリ検索結果', 'app-link-generator')}</span>
                             </div>
                             <div style={{ maxHeight: '400px', overflowY: 'auto' }}>
                                 {searchResults.ios.length > 0 ? (
                                     searchResults.ios.map((app, index) => renderAppItem(app, index))
                                 ) : (
-                                    <div style={{ color: '#999', fontSize: '12px', padding: '10px' }}>{__('見つかりませんでした。', 'app-store-links')}</div>
+                                    <div style={{ color: '#999', fontSize: '12px', padding: '10px' }}>{__('見つかりませんでした。', 'app-link-generator')}</div>
                                 )}
                             </div>
                         </div>
@@ -230,13 +230,13 @@ export default function Edit({ attributes, setAttributes }) {
                         <div style={{ flex: '1 1 300px' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px', color: '#666', borderBottom: '1px solid #eee', paddingBottom: '5px' }}>
                                 <span className="dashicons dashicons-tablet" style={{ color: '#4da6ff' }}></span>
-                                <span>{__('Androidアプリ検索結果', 'app-store-links')}</span>
+                                <span>{__('Androidアプリ検索結果', 'app-link-generator')}</span>
                             </div>
                             <div style={{ maxHeight: '400px', overflowY: 'auto' }}>
                                 {searchResults.android.length > 0 ? (
                                     searchResults.android.map((app, index) => renderAppItem(app, index))
                                 ) : (
-                                    <div style={{ color: '#999', fontSize: '12px', padding: '10px' }}>{__('見つかりませんでした。', 'app-store-links')}</div>
+                                    <div style={{ color: '#999', fontSize: '12px', padding: '10px' }}>{__('見つかりませんでした。', 'app-link-generator')}</div>
                                 )}
                             </div>
                         </div>
@@ -299,8 +299,8 @@ export default function Edit({ attributes, setAttributes }) {
                     )}
                 </div>
             ) : (
-                <Placeholder icon="smartphone" label="App Store Links">
-                    <p>{__('アプリを検索して詳細を表示してください。', 'app-store-links')}</p>
+                <Placeholder icon="smartphone" label={__('アプリリンクジェネレーター', 'app-link-generator')}>
+                    <p>{__('アプリを検索して詳細を表示してください。', 'app-link-generator')}</p>
                 </Placeholder>
             )}
         </div>

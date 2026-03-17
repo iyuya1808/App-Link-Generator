@@ -3,104 +3,111 @@ Contributors: iyuya0623
 Tags: app store, google play, mobile app, app link, block editor
 Requires at least: 5.8
 Tested up to: 6.9
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Display App Store and Google Play Store installation links easily with block editor support.
+App StoreとGoogle Play Storeのアプリインストールリンクをブロックエディタで簡単に表示できるプラグインです。
 
 == Description ==
 
-App Link Generator is a WordPress plugin that allows you to easily display installation links for mobile apps from the App Store and Google Play Store. This plugin is fully compatible with the WordPress block editor (Gutenberg).
+App Link Generator は、App StoreおよびGoogle Play Storeのモバイルアプリインストールリンクを簡単に表示できるWordPressプラグインです。WordPressブロックエディタ（Gutenberg）に完全対応しています。
 
-**Features:**
+**主な機能:**
 
-* Search and select apps from App Store and Google Play Store
-* Display app information including icon, name, developer, price, and ratings
-* Customizable display options for each store
-* Automatic caching of app data for better performance
-* Daily automatic updates of app information
-* Block editor (Gutenberg) support
+* App StoreおよびGoogle Play Storeからアプリを検索・選択
+* アイコン・アプリ名・開発者名・価格・評価などのアプリ情報を自動表示
+* 各ストアの表示・非表示を個別にカスタマイズ可能
+* パフォーマンス向上のためのアプリデータ自動キャッシュ
+* アプリ情報の毎日自動更新
+* ブロックエディタ（Gutenberg）対応
 
-== External Services ==
+== 外部サービスの利用について ==
 
-This plugin connects to external services to retrieve app information. By using this plugin, you acknowledge and agree to the following:
+このプラグインはアプリ情報を取得するために外部サービスと通信します。本プラグインをご利用いただくことで、以下の内容に同意したものとみなします。
 
-**iTunes Search API (Apple Inc.)**
+**iTunes Search API（Apple Inc.）**
 
-* **Purpose**: Used to search for iOS apps and retrieve app metadata (name, icon, price, ratings, etc.)
-* **When data is sent**: When you search for an app in the block editor
-* **Data sent**: Search term (app name or keyword)
-* **Service provider**: Apple Inc.
-* **Terms of Service**: https://www.apple.com/legal/internet-services/itunes/
-* **Privacy Policy**: https://www.apple.com/legal/privacy/
+* **用途**: iOSアプリの検索およびアプリメタデータ（名前・アイコン・価格・評価など）の取得
+* **データ送信のタイミング**: ブロックエディタでアプリを検索したとき
+* **送信データ**: 検索キーワード（アプリ名など）
+* **サービス提供者**: Apple Inc.
+* **利用規約**: https://www.apple.com/legal/internet-services/itunes/
+* **プライバシーポリシー**: https://www.apple.com/legal/privacy/
 
-**Google Play Store (Google LLC)**
+**Google Playストア（Google LLC）**
 
-* **Purpose**: Used to search for Android apps and retrieve app information
-* **When data is sent**: When you search for an app in the block editor
-* **Data sent**: Search term (app name or keyword)
-* **How it works**: The plugin scrapes publicly available information from Google Play Store web pages
-* **Service provider**: Google LLC
-* **Terms of Service**: https://play.google.com/about/play-terms/
-* **Privacy Policy**: https://policies.google.com/privacy
+* **用途**: Androidアプリの検索およびアプリ情報の取得
+* **データ送信のタイミング**: ブロックエディタでアプリを検索したとき
+* **送信データ**: 検索キーワード（アプリ名など）
+* **仕組み**: Google PlayストアのWebページから公開情報を取得します
+* **サービス提供者**: Google LLC
+* **利用規約**: https://play.google.com/about/play-terms/
+* **プライバシーポリシー**: https://policies.google.com/privacy
 
-**Important Notes:**
+**注意事項:**
 
-* No personal user data is sent to these services
-* Only search queries entered by the site administrator are transmitted
-* App information is cached locally to minimize external requests
-* The plugin does not track or collect any user behavior data
+* ユーザーの個人情報はいかなる外部サービスにも送信されません
+* サイト管理者が入力した検索キーワードのみが送信されます
+* アプリ情報はローカルにキャッシュされ、外部リクエストを最小限に抑えます
+* 本プラグインはユーザーの行動データを追跡・収集しません
 
-== Installation ==
+== インストール ==
 
-1. Upload the plugin files to the `/wp-content/plugins/app-link-generator` directory, or install the plugin through the WordPress plugins screen directly.
-2. Activate the plugin through the 'Plugins' screen in WordPress.
-3. Use the "App Store Links" block in the block editor to add app links to your posts or pages.
+1. プラグインファイルを `/wp-content/plugins/app-link-generator` ディレクトリにアップロードするか、WordPressの「プラグイン」画面から直接インストールしてください。
+2. WordPress管理画面の「プラグイン」からプラグインを有効化してください。
+3. 投稿・固定ページのブロックエディタで「アプリリンクジェネレーター」ブロックを追加してください。
 
-== Frequently Asked Questions ==
+== よくある質問 ==
 
-= How do I add an app link? =
+= アプリリンクを追加するには？ =
 
-1. In the block editor, click the "+" button to add a new block
-2. Search for "App Store Links" or "App Link Generator"
-3. Enter the app name in the search field
-4. Select the app from the search results
-5. The app information will be displayed automatically
+1. ブロックエディタで「＋」ボタンをクリックして新しいブロックを追加
+2. 「アプリリンクジェネレーター」または「App Link Generator」で検索
+3. 検索フィールドにアプリ名を入力
+4. 検索結果からアプリを選択
+5. アプリ情報が自動的に表示されます
 
-= Can I customize the appearance? =
+= 表示デザインをカスタマイズできますか？ =
 
-Yes, you can customize the appearance using CSS. The plugin uses the "appreach" class for styling.
+はい、CSSを使ってカスタマイズできます。プラグインはスタイリングに `appreach` クラスを使用しています。
 
-= How often is app information updated? =
+= アプリ情報はどのくらいの頻度で更新されますか？ =
 
-App information is automatically updated once daily. You can also manually refresh the data by re-selecting the app in the block editor.
+アプリ情報は毎日1回自動更新されます。ブロックエディタでアプリを再選択することで手動でも更新できます。
 
-= Does this plugin work with the classic editor? =
+= クラシックエディタでも使えますか？ =
 
-No, this plugin is designed for the block editor (Gutenberg) only.
+いいえ、本プラグインはブロックエディタ（Gutenberg）専用です。
 
-== Screenshots ==
+== スクリーンショット ==
 
-1. App search interface in the block editor
-2. App information display on the frontend
+1. ブロックエディタでのアプリ検索画面
+2. フロントエンドでのアプリ情報表示
 
-== Changelog ==
+== 更新履歴 ==
+
+= 1.2.0 =
+* 管理画面・エディタUIの日本語対応
+* テキストドメインを統一（app-link-generator）
+* wp_set_script_translations() による翻訳ファイル読み込みに対応
+* load_plugin_textdomain() を追加
+* readme.txt を日本語化
 
 = 1.1.0 =
-* Localized badge images (removed external dependencies)
-* Added proper documentation for external service usage
-* Improved caching mechanism
-* Bug fixes and performance improvements
+* バッジ画像をローカル化（外部依存を解消）
+* 外部サービス利用に関するドキュメントを追加
+* キャッシュ機能の改善
+* バグ修正およびパフォーマンス改善
 
 = 1.0.0 =
-* Initial release
-* App Store and Google Play Store support
-* Block editor integration
-* Automatic caching and daily updates
+* 初回リリース
+* App StoreおよびGoogle Play Store対応
+* ブロックエディタ統合
+* 自動キャッシュおよび毎日自動更新
 
-== Upgrade Notice ==
+== アップグレードのご案内 ==
 
 = 1.1.0 =
-This version removes external dependencies for badge images and adds proper documentation for external service usage, as required by WordPress.org plugin guidelines.
+バッジ画像の外部依存を解消し、WordPress.orgプラグインガイドラインに準拠した外部サービス利用のドキュメントを追加しました。

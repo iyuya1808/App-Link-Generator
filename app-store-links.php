@@ -3,7 +3,7 @@
  * Plugin Name: App Link Generator
  * Plugin URI: https://github.com/iyuya1808/App-Link-Generator
  * Description: AppStoreとGoogle Play Storeのインストールリンクを簡単に表示できるブロックエディタ対応プラグイン
- * Version: 1.1.0
+ * Version: 1.2.0
  * Author: Technophere
  * Author URI: https://technophere.com
  * License: GPL v2 or later
@@ -17,21 +17,40 @@ if (!defined('ABSPATH')) {
 }
 
 /**
+ * テキストドメインの読み込み
+ */
+function applige_load_textdomain() {
+    load_plugin_textdomain(
+        'app-link-generator',
+        false,
+        dirname(plugin_basename(__FILE__)) . '/languages'
+    );
+}
+add_action('init', 'applige_load_textdomain');
+
+/**
  * ブロックの登録
  */
 function applige_register_block() {
     // block.jsonからブロックを登録
     register_block_type(__DIR__ . '/build');
-    
+
     // エディタに画像URLを提供
+    wp_localize_script(
+        'app-link-generator-app-store-links-editor-script',
+        'appligeBadgeImages',
+        array(
+            'appStore' => plugin_dir_url(__FILE__) . 'assets/images/itune_ja.svg',
+            'googlePlay' => plugin_dir_url(__FILE__) . 'assets/images/gplay_ja.png'
+        )
+    );
+
+    // JavaScriptの翻訳ファイルを読み込む
     if (function_exists('wp_set_script_translations')) {
-        wp_localize_script(
+        wp_set_script_translations(
             'app-link-generator-app-store-links-editor-script',
-            'appligeBadgeImages',
-            array(
-                'appStore' => plugin_dir_url(__FILE__) . 'assets/images/itune_ja.svg',
-                'googlePlay' => plugin_dir_url(__FILE__) . 'assets/images/gplay_ja.png'
-            )
+            'app-link-generator',
+            plugin_dir_path(__FILE__) . 'languages'
         );
     }
 }
