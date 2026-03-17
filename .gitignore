@@ -1,5 +1,4 @@
 node_modules/
+svn-work/
 .DS_Store
-*.log
-.git/index.lock
-app-store-links.zip
+*.zip
